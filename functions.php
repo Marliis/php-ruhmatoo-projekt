@@ -8,19 +8,17 @@
 	$database = "if16_health_diary";
 
 
-function signup ($Name, $Age, $Email, $password, $Gender) {
+function signup ($firstName, $lastName, $Email, $password, $Gender) {
 		
 		$mysqli = new mysqli($GLOBALS["serverHost"],$GLOBALS["serverUsername"],$GLOBALS["serverPassword"],$GLOBALS["database"]);
-		$stmt = $mysqli->prepare("INSERT INTO user_sample (Name, Age, Email, password, Gender) VALUES (?,?,?,?,?)");
+		$stmt = $mysqli->prepare("INSERT INTO user (firstName, lastName, Email, password, Gender) VALUES (?,?,?,?,?)");
 		echo $mysqli->error;
-		$stmt->bind_param("sisss",$Name, $Age, $Email, $password, $Gender);
+		$stmt->bind_param("sssss", $firstName, $lastName, $Email, $password, $Gender);
 		if ($stmt->execute()) {
-			echo "salvestamine ınnestus";
+			echo "salvestamine õnnestus";
 		} else {
 			echo "ERROR ".$stmt->error;
 		}
-
-
 	}
 
 	function login($Email, $password) {
@@ -53,7 +51,7 @@ function signup ($Name, $Age, $Email, $password, $Gender) {
 				$_SESSION["userId"] = $id;
 				$_SESSION["Email"] = $EmailFromDb;
 			
-				//$_SESSION["Name"] = $NameFromDB;
+				$_SESSION["firstName"] = $NameFromDB;
 				//suunaks uuele lehele
 
 				} else {

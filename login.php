@@ -9,45 +9,27 @@
 
 	
 	//MUUTUJAD
-	$signupUsernameError = "";	
-	$signupEmailError = "";
-	$signupPasswordError = "";
-	$loginEmailError = "";
-	$genderError = "";
-	$firstNameError = "";
-	$lastNameError = "";
-	
 	$loginEmail = "";
-	$SignupEmail = "";
-	$signupUsername ="";
-	$signupPassword = "";
-	$gender = "";
+	$loginEmailError = "";
+	$loginPassword = "";
+	$loginPasswordError = "";
+	
 	$firstName = "";
 	$lastName = "";
-	
+	$firstNameError = "";
+	$lastNameError = "";
+	$SignupEmail = "";
+	$signupEmailError = "";
+	$signupPassword = "";
+	$signupPasswordError = "";
+	$gender = "";
+	$genderError = "";
+
 	if ( isset ( $_POST["loginEmail"] ) ) {
 		if ( empty ( $_POST["loginEmail"] ) ) {
 			$loginEmailError = "See väli on kohustuslik!";
 		} else {
 			$loginEmail = $_POST["loginEmail"];
-		}
-	}
-	
-	if ( isset ( $_POST["signupUsername"] ) ) {
-		if ( empty ( $_POST["signupUsername"] ) ) {
-			$signupUsernameError = "See väli on kohustuslik!";
-		} else {
-			$signupUsername = $_POST["signupUsername"];
-		}
-	}
-
-	if (isset ($_POST["signupPassword"]) ) {
-		if (empty ($_POST["signupPassword"]) ) { 
-			$signupPasswordError = "See väli on kohustuslik!";
-		} else {
-			if (strlen ($_POST["signupPassword"]) <= 8 ){
-				$signupPasswordError = "Parool peab olema 8 tähemärki pikk!";
-			}
 		}
 	}
 
@@ -57,9 +39,23 @@
 		} else {
 			if (!preg_match("/^[a-zA-Z õäöüšž-]*$/",$_POST["firstName"])) { 
 				$firstNameError = "Pole nimi!"; 
+			}else{
+				$firstName = $_POST["firstName"];
 			}
 		}
 	}
+	
+	if (isset ($_POST["lastName"]) ){
+		if (empty ($_POST["lastName"]) ){
+			$lastNameError = "See väli on kohustuslik!";		
+		} else {
+			if (!preg_match("/^[a-zA-Z õäöüšž-]*$/",$_POST["lastName"])) { 
+				$lastNameError = "Pole nimi!"; 
+			}else{
+				$lastName = $_POST["lastName"];
+			}
+		}
+	}	
 
 	$gender = "";
 
@@ -78,6 +74,17 @@
 			$signupEmail = $_POST["signupEmail"];
 		}
 	}
+	
+		if (isset ($_POST["signupPassword"]) ) {
+		if (empty ($_POST["signupPassword"]) ) { 
+			$signupPasswordError = "See väli on kohustuslik!";
+		} else {
+			if (strlen ($_POST["signupPassword"]) <= 8 ){
+				$signupPasswordError = "Parool peab olema 8 tähemärki pikk!";
+			}
+		}
+	}
+	
 	var_dump($signupPasswordError);
 	if (isset($_POST["signupPassword"]) &&
 		isset($_POST["signupEmail"]) &&
@@ -91,6 +98,8 @@
 		empty($lastNameError)) {
 			
 		echo "Salvestan...<br>";
+		echo "eesnimi".$firstName."<br>";
+		echo "perenimi".$lastName."<br>";
 		echo "email ".$signupEmail."<br>";
 		$password = hash("sha512", $_POST["signupPassword"]);
 		echo "parool ".$_POST["signupPassword"]."<br>";
@@ -100,7 +109,7 @@
 		$signupEmail = cleanInput($signupEmail);
 		$password = cleanInput($password);
 
-		signup($signupEmail, $password, $firstName, $lastName, $gender);
+		signup($firstName, $lastName, $signupEmail, $password, $gender);
 		}
 
 		$error = "";
@@ -128,7 +137,7 @@
 		<form method="POST">
 			<p style="color:red;"><?=$error;?></p>
 			
-			<input name="loginEmail" type="email" value="<?=$loginEmail;?>" placeholder="E-mail/Kasutajatunnus"> <?php echo $loginEmail; ?>
+			<input name="loginEmail" type="email" value="<?=$loginEmail;?>" placeholder="E-mail"> <?php echo $loginEmail; ?>
 			<br><br>
 			
 			<input name="loginPassword" type="password" placeholder="Parool">
