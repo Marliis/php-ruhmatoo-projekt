@@ -172,12 +172,12 @@
 			
 			<label>Parool</label><br>
 			<input name="signupPassword" type="password" value="<?=$signupPassword;?>" <?php echo $signupPasswordError; ?>
-			<br>
+			<br><br>
 			
 			<label>Kinnita parool</label><br>
 			<input name="signupPassword" type="password" value="<?=$signupPassword;?>" <?php echo $signupPasswordError; ?> 
 			<br><br>
-			
+			<br>
 			<input type="submit" value="Loo kasutaja">
 			
 		</form>

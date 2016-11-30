@@ -7,8 +7,12 @@
 	session_start();
 	$database = "if16_health_diary";
 
+<<<<<<< HEAD
 
 function signup ($Name, $Age, $Email, $password, $Gender) {
+=======
+function signup ($name, $gender, $age, $email, $password) {
+>>>>>>> 19fb98d81d90da83b7967a525f72a1c97ccc8fa2
 		
 		$mysqli = new mysqli($GLOBALS["serverHost"],$GLOBALS["serverUsername"],$GLOBALS["serverPassword"],$GLOBALS["database"]);
 
@@ -27,11 +31,18 @@ function signup ($Name, $Age, $Email, $password, $Gender) {
 			echo "ERROR ".$stmt->error;
 
 		}
+<<<<<<< HEAD
 
 	}
 
 	function login($Email, $password) {
 
+=======
+	}
+	
+	function login($email, $password) {
+		
+>>>>>>> 19fb98d81d90da83b7967a525f72a1c97ccc8fa2
 		$error = "";
 
 		$mysqli = new mysqli($GLOBALS["serverHost"],$GLOBALS["serverUsername"],$GLOBALS["serverPassword"],$GLOBALS["database"]);
@@ -87,18 +98,29 @@ function signup ($Name, $Age, $Email, $password, $Gender) {
 				$error = "parool vale";
 
 			}
+<<<<<<< HEAD
 
 			} else {
 
+=======
+		
+		} else {
+>>>>>>> 19fb98d81d90da83b7967a525f72a1c97ccc8fa2
 			//ei olnud 
 
 			$error = "sellise emailiga ".$Email." kasutajat ei olnud";
 
 		}
+<<<<<<< HEAD
 
 		return $error;
 
 		}
 
 
+=======
+		
+		return $error;
+	}
+>>>>>>> 19fb98d81d90da83b7967a525f72a1c97ccc8fa2
 ?>
