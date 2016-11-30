@@ -8,79 +8,97 @@
 	$database = "if16_health_diary";
 
 
-function signup ($name, $gender, $age, $email, $password) {
+function signup ($Name, $Age, $Email, $password, $Gender) {
 		
 		$mysqli = new mysqli($GLOBALS["serverHost"],$GLOBALS["serverUsername"],$GLOBALS["serverPassword"],$GLOBALS["database"]);
-		$stmt = $mysqli->prepare("INSERT INTO user_sample (name, gender, age, email, password) VALUES (?, ?, ?, ?, ?)");
+
+		$stmt = $mysqli->prepare("INSERT INTO user_sample (Name, Age, Email, password, Gender) VALUES (?,?,?,?,?)");
+
 		echo $mysqli->error;
-		//asendan küsimärgi väärtustega
-		//iga muutuja kohta tuleb kirjutada üks täht, mis tüüpi muutuja on
-		//s-stringi
-		//i-integer
-		//d-double/float
-		$stmt->bind_param("sisss", $name, $age, $email, $password, $gender);
-		
+
+		$stmt->bind_param("sisss",$Name, $Age, $Email, $password, $Gender);
+
 		if ($stmt->execute()) {
-			echo "salvestamine õnnestus";
+
+			echo "salvestamine ınnestus";
+
 		} else {
+
 			echo "ERROR ".$stmt->error;
+
 		}
-		
+
 	}
-	
-	
-	function login($email, $password) {
-		
+
+	function login($Email, $password) {
+
 		$error = "";
-		
+
 		$mysqli = new mysqli($GLOBALS["serverHost"],$GLOBALS["serverUsername"],$GLOBALS["serverPassword"],$GLOBALS["database"]);
+
 		$stmt = $mysqli->prepare("
-			SELECT id, email, password, created 
+
+			SELECT id, Email, password, created
+
 			FROM user_sample
-			WHERE email = ?
+
+			WHERE Email = ?
+
 		");
+
 		echo $mysqli->error;
-		
-		//asendan küsimärgi
-		$stmt->bind_param("s", $email);
-		
-		//määran tupladele muutujad
-		$stmt->bind_result($id, $emailFromDb, $passwordFromDb, $created);
+
+		//asendan k¸sim‰rgi
+
+		$stmt->bind_param("s", $Email);
+
+		//m‰‰ran tupladele muutujad
+
+		$stmt->bind_result($id, $EmailFromDb, $passwordFromDb, $created);
+
 		$stmt->execute();
-		
-		//küsin rea andmeid
+
+		//k¸sin rea andmeid
+
 		if($stmt->fetch()) {
+
 			//oli rida
-		
-			// võrdlen paroole
+
+			// vırdlen paroole
+
 			$hash = hash("sha512", $password);
+
 			if($hash == $passwordFromDb) {
-				
+
 				echo "kasutaja ".$id." logis sisse";
-				
-				
+
 				$_SESSION["userId"] = $id;
-				$_SESSION["email"] = $emailFromDb;
+
+				$_SESSION["Email"] = $EmailFromDb;
 				
+				//$_SESSION["Name"] = $NameFromDB;
+
 				//suunaks uuele lehele
-				header("Location: data.php");
-				exit();
+
 				
-			} else {
+
+				} else {
+
 				$error = "parool vale";
+
 			}
-			
-		
-		} else {
+
+			} else {
+
 			//ei olnud 
-			
-			$error = "sellise emailiga ".$email." kasutajat ei olnud";
+
+			$error = "sellise emailiga ".$Email." kasutajat ei olnud";
+
 		}
-		
-		
+
 		return $error;
-		
-		
-	}
+
+		}
+
 
 ?>
