@@ -1,4 +1,30 @@
 # PHP rühmatöö projekt
+
+PROJEKTI NIMI - MINU TERVISEPÄEVIK
+
+LIIKMED - Marliis Odamus, Eliise Piiritalo, Regiina Krivulina
+
+EESMÄRK - Treeningu ja toitumise analüüsimine. Inimestel on võimalus endale kasutaja luua ning oma treening- ja toitumisandmeid sisestada ja analüüsida(nädala/kuu kokkuvõtted).
+
+KIRJELDUS - Rühmatöö eeskujuks võtsime "Terve Eesti Eest" treeningpäeviku. Veebiportaalis saab määrata enda igapäevase liikumistegevuse algus- ja lõppajad. Võimalus vaadata päeviku graafikut, mis näitab visuaalselt kalorite kulu. Graafiku perioodi saab valida klikates nupule "Vali periood". Samuti on võimalus lisada uusi tegevusi valides kõrvalolevast kalendrist päeva, mille tulemusi soovitakse sisestada.
+Teise rakendusena võtsime eeskujuks "Nutridata Toitumisprogramm". NutriData toitumisprogramm võimaldab analüüsida menüü energia- ja toitainete sisalduse vastavust Eesti riiklikele ea- ja soopõhistele toitumissoovitustele.
+
+FUNKTSIONAALSUSE LOETELU -
+v0.1 Saab teha kasutaja ja sisselogida
+v0.2 Saab lisada treeningandmed
+v0.3 Saab lisada toidukorra
+v0.4 Saab näha enda tulemusi
+
+
+KOKKUVÕTE
+
+Marliis - 
+
+Eliise -
+
+Regiina -
+
+
 **Rühmatööde demo päev** on valitud eksamipäev jaanuaris, kuhu tullakse terve rühmaga koos!
 
 ## Tööjuhend
@@ -38,27 +64,3 @@
 * **Stiilijuhend:** [Coding Style Guide](http://www.php-fig.org/psr/psr-2/)
 * **GIT õpetus:** [Become a git guru.](https://www.atlassian.com/git/tutorials/)
 * **Abimaterjale:** [Veebirakenduste loomine PHP ja MySQLi abil](http://minitorn.tlu.ee/~jaagup/kool/java/loeng/veebipr/veebipr1.pdf), [PHP with MySQL Essential Training] (http://www.lynda.com/MySQL-tutorials/PHP-MySQL-Essential-Training/119003-2.html)
-
-PROJEKTI NIMI - MINU TERVISEPÄEVIK
-
-LIIKMED - Marliis Odamus, Eliise Piiritalo, Regiina Krivuline
-
-EESMÄRK - Treeningu ja toitumise analüüsimine. Inimestel on võimalus endale kasutaja luua ning oma treening- ja toitumisandmeid sisestada ja analüüsida(nädala/kuu kokkuvõtted).
-
-KIRJELDUS - Rühmatöö eeskujuks võtsime "Terve Eesti Eest" treeningpäeviku. Veebiportaalis saab määrata enda igapäevase liikumistegevuse algus- ja lõppajad. Võimalus vaadata päeviku graafikut, mis näitab visuaalselt kalorite kulu. Graafiku perioodi saab valida klikates nupule "Vali periood". Samuti on võimalus lisada uusi tegevusi valides kõrvalolevast kalendrist päeva, mille tulemusi soovitakse sisestada.
-Teise rakendusena võtsime eeskujuks "Nutridata Toitumisprogramm". NutriData toitumisprogramm võimaldab analüüsida menüü energia- ja toitainete sisalduse vastavust Eesti riiklikele ea- ja soopõhistele toitumissoovitustele.
-
-FUNKTSIONAALSUSE LOETELU -
-v0.1 Saab teha kasutaja ja sisselogida
-v0.2 Saab lisada treeningandmed
-v0.3 Saab lisada toidukorra
-v0.4 Saab näha enda tulemusi
-
-
-KOKKUVÕTE
-
-Marliis - 
-
-Eliise -
-
-Regiina -
