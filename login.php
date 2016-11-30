@@ -127,66 +127,72 @@
 	
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Sisselogimise lehekülg</title>
-	</head>
-	<body>
+	
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-sm-4 col-md-3">
+				<h1>Logi sisse</h1>
+				<form method="POST">
+					<p style="color:red;"><?=$error;?></p>
 
-		<h1>Logi sisse</h1>
-		
-		<form method="POST">
-			<p style="color:red;"><?=$error;?></p>
+					<div class = "form-group">
+						<input class="form-control" name = "loginEmail" type="email" value="<?=$loginEmail;?>" placeholder="E-mail"> <?php echo $loginEmail; ?>
+					</div>
+					<br>
+						
+					<input type="password" name="loginPassword" placeholder="Parool">
+					<br><br>
+						
+					<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Logi sisse 1">
+					<input class="btn btn-success btn-sm btn-block visible-xs-block" type="submit" value="Logi sisse 2">
+				
+				</form>
+			</div>
+				
+			<div class = "col-sm-4 col-md-3 col-sm-offset-4 col-md-offset-3">
+				<h1>Loo kasutaja</h1>
+				<form method="POST">
 			
-			<input name="loginEmail" type="email" value="<?=$loginEmail;?>" placeholder="E-mail"> <?php echo $loginEmail; ?>
-			<br><br>
-			
-			<input name="loginPassword" type="password" placeholder="Parool">
-			<br><br>
-			
-			<input type="submit" value="Logi sisse">
-			
-		</form>
-		<h1>Loo kasutaja</h1>
-		
-		<form method="POST">
-			
-			<label>Eesnimi</label><br>
-			<input name="firstName" type="text"> <?php echo $firstNameError; ?>
-			<br><br>
-			
-			<label>Perekonnanimi</label><br>
-			<input name="lastName" type="text"> <?php echo $lastNameError; ?>
-			<br><br>
-			
-			<label>Sugu</label><br>
-			
-			<?php if($gender == "male") { ?>
-				<input type="radio" name="gender" value="male" checked> Male<br>
-			<?php } else{ ?>
-					<input type="radio" name="gender" value="male" > Male<br>
-			<?php } ?>
-			
-			<?php if($gender == "female") { ?>
-					<input type="radio" name="gender" value="female" checked> Female<br>
-			<?php } else { ?>
-					<input type="radio" name="gender" value="female" > Female<br>
-			<?php } ?>
-			<br>
-			
-			<label>E-maili aadress</label><br>
-			<input name="signupEmail" type="email"> <?php echo $signupEmailError?>
-			<br>
-			
-			<label>Parool</label><br>
-			<input name="signupPassword" type="password" value="<?=$signupPassword;?>"> <?php echo $signupPasswordError; ?>
-			<br><br>
-			
-			<label>Kinnita parool</label><br>
-			<input name="signupPassword" type="password" value="<?=$signupPassword;?>"> <?php echo $signupPasswordError; ?> 
-			<br><br>
-			<br>
-			<input type="submit" value="Loo kasutaja">
-			
-		</form>
-	</body>
+				<label>Eesnimi</label><br>
+				<input name="firstName" type="text"> <?php echo $firstNameError; ?>
+				<br><br>
+					
+				<label>Perekonnanimi</label><br>
+				<input name="lastName" type="text"> <?php echo $lastNameError; ?>
+				<br><br>
+					
+				<label>Sugu</label><br>
+					
+				<?php if($gender == "male") { ?>
+						<input type="radio" name="gender" value="male" checked>Mees<br>
+				<?php } else{ ?>
+							<input type="radio" name="gender" value="male" >Mees<br>
+				<?php } ?>
+					
+				<?php if($gender == "female") { ?>
+							<input type="radio" name="gender" value="female" checked>Naine<br>
+				<?php } else { ?>
+							<input type="radio" name="gender" value="female" >Naine<br>
+				<?php } ?>
+				<br>
+				
+				<label>E-maili aadress</label><br>
+				<input name="signupEmail" type="email"> <?php echo $signupEmailError?>
+				<br><br>
+				
+				<label>Parool</label><br>
+				<input name="signupPassword" type="password" value="<?=$signupPassword;?>"> <?php echo $signupPasswordError; ?>
+				<br><br>
+				
+				<label>Kinnita parool</label><br>
+				<input name="signupPassword" type="password" value="<?=$signupPassword;?>"> <?php echo $signupPasswordError; ?> 
+				<br><br>
+				<br>
+				<input type="submit" value="Loo kasutaja">
+
+			</form>
+			</div>
+		</div>
+	</form>
+	</div>
 </html>
