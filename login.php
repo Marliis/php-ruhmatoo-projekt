@@ -27,7 +27,7 @@
 	
 	if ( isset ( $_POST["loginEmail"] ) ) {
 		if ( empty ( $_POST["loginEmail"] ) ) {
-			$loginEmailError = "See v‰li on kohustuslik!";
+			$loginEmailError = "See v√§li on kohustuslik!";
 		} else {
 			$loginEmail = $_POST["loginEmail"];
 		}
@@ -35,7 +35,7 @@
 	
 	if ( isset ( $_POST["signupUsername"] ) ) {
 		if ( empty ( $_POST["signupUsername"] ) ) {
-			$signupUsernameError = "See v‰li on kohustuslik!";
+			$signupUsernameError = "See v√§li on kohustuslik!";
 		} else {
 			$signupUsername = $_POST["signupUsername"];
 		}
@@ -43,19 +43,19 @@
 
 	if (isset ($_POST["signupPassword"]) ) {
 		if (empty ($_POST["signupPassword"]) ) { 
-			$signupPasswordError = "See v‰li on kohustuslik!";
+			$signupPasswordError = "See v√§li on kohustuslik!";
 		} else {
 			if (strlen ($_POST["signupPassword"]) <= 8 ){
-				$signupPasswordError = "Parool peab olema 8 t‰hem‰rki pikk!";
+				$signupPasswordError = "Parool peab olema 8 t√§hem√§rki pikk!";
 			}
 		}
 	}
 
 	if (isset ($_POST["firstName"]) ){
 		if (empty ($_POST["firstName"]) ){
-			$firstNameError = "See v‰li on kohustuslik!";		
+			$firstNameError = "See v√§li on kohustuslik!";		
 		} else {
-			if (!preg_match("/^[a-zA-Z ı‰ˆ¸˛-]*$/",$_POST["firstName"])) { 
+			if (!preg_match("/^[a-zA-Z √µ√§√∂√º≈°≈æ-]*$/",$_POST["firstName"])) { 
 				$firstNameError = "Pole nimi!"; 
 			}
 		}
@@ -65,7 +65,7 @@
 
 	if (isset ($_POST["gender"]) ) {
 		if (empty ($_POST["gender"]) ) { 
-			$genderError = "See v‰li on kohustuslik!";
+			$genderError = "See v√§li on kohustuslik!";
 		} else {
 			$gender = $_POST["gender"];
 		}
@@ -73,20 +73,18 @@
 
 	if (isset ($_POST["signupEmail"]) ) {
 		if (empty ($_POST["signupEmail"]) ) { 
-			$signupEmailError = "See v‰li on kohustuslik!";
+			$signupEmailError = "See v√§li on kohustuslik!";
 		} else {
 			$signupEmail = $_POST["signupEmail"];
 		}
 	}
-
+	var_dump($signupPasswordError);
 	if (isset($_POST["signupPassword"]) &&
 		isset($_POST["signupEmail"]) &&
-		isset($_POST["signupUsername"]) &&
 		isset($_POST["gender"]) &&
 		isset($_POST["firstName"]) &&
 		isset($_POST["lastName"]) &&
 		empty($signupEmailError) && 
-		empty($signupUsernameError) && 
 		empty($genderError) && 
 		empty($signupPasswordError) &&
 		empty($firstNameError) &&
@@ -96,7 +94,7 @@
 		echo "email ".$signupEmail."<br>";
 		$password = hash("sha512", $_POST["signupPassword"]);
 		echo "parool ".$_POST["signupPassword"]."<br>";
-		echo "r‰si ".$password."<br>";
+		echo "r√§si ".$password."<br>";
 		echo "sugu ".$gender."<br>";
 
 		$signupEmail = cleanInput($signupEmail);
@@ -121,7 +119,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Sisselogimise lehek¸lg</title>
+		<title>Sisselogimise lehek√ºlg</title>
 	</head>
 	<body>
 
@@ -171,11 +169,11 @@
 			<br>
 			
 			<label>Parool</label><br>
-			<input name="signupPassword" type="password" value="<?=$signupPassword;?>" <?php echo $signupPasswordError; ?>
+			<input name="signupPassword" type="password" value="<?=$signupPassword;?>"> <?php echo $signupPasswordError; ?>
 			<br><br>
 			
 			<label>Kinnita parool</label><br>
-			<input name="signupPassword" type="password" value="<?=$signupPassword;?>" <?php echo $signupPasswordError; ?> 
+			<input name="signupPassword" type="password" value="<?=$signupPassword;?>"> <?php echo $signupPasswordError; ?> 
 			<br><br>
 			<br>
 			<input type="submit" value="Loo kasutaja">

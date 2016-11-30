@@ -69,5 +69,13 @@ function signup ($Name, $Age, $Email, $password, $Gender) {
 
 		}
 
-	
+	function cleanInput($input){
+		
+		$input = trim($input);
+		$input = stripslashes($input);
+		$input = htmlspecialchars($input);
+		
+		return $input;
+		
+	}
 ?>
