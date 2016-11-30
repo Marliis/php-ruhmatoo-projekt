@@ -100,7 +100,7 @@
 		$signupEmail = cleanInput($signupEmail);
 		$password = cleanInput($password);
 
-		signup($signupEmail, $password, $signupUsername, $gender);
+		signup($signupEmail, $password, $firstName, $lastName, $gender);
 		}
 
 		$error = "";
