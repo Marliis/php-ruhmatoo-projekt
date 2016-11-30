@@ -7,7 +7,6 @@
 	session_start();
 	$database = "if16_health_diary";
 
-
 function signup ($name, $gender, $age, $email, $password) {
 		
 		$mysqli = new mysqli($GLOBALS["serverHost"],$GLOBALS["serverUsername"],$GLOBALS["serverPassword"],$GLOBALS["database"]);
@@ -25,9 +24,7 @@ function signup ($name, $gender, $age, $email, $password) {
 		} else {
 			echo "ERROR ".$stmt->error;
 		}
-		
 	}
-	
 	
 	function login($email, $password) {
 		
@@ -69,7 +66,6 @@ function signup ($name, $gender, $age, $email, $password) {
 			} else {
 				$error = "parool vale";
 			}
-			
 		
 		} else {
 			//ei olnud 
@@ -77,10 +73,6 @@ function signup ($name, $gender, $age, $email, $password) {
 			$error = "sellise emailiga ".$email." kasutajat ei olnud";
 		}
 		
-		
 		return $error;
-		
-		
 	}
-
 ?>
