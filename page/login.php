@@ -14,7 +14,6 @@
 		header("Location: data.php");
 		exit();	
 	}
-	
 
 	// MUUTUJAD
 	$firstName="";	
@@ -30,7 +29,6 @@
 	$loginEmailError = "";
 	$loginPassword = "";
 	$loginPasswordError = "";
-	
 	
 	// kas sisse logimisel oli e-post olemas
 	if ( isset ( $_POST["loginEmail"] ) ) {
@@ -59,8 +57,7 @@
 		} else {
 			
 			// email on õige, salvestan väärtuse muutujasse
-			$signupEmail = $_POST["signupEmail"];
-			
+			$signupEmail = $_POST["signupEmail"];		
 		}		
 	}
 	
@@ -80,8 +77,7 @@
 			
 			if ( strlen($_POST["loginPassword"]) < 8 ) {
 				
-				$loginPasswordError = "Parool peab olema vähemalt 8 tähemärkki pikk";
-				
+				$loginPasswordError = "Parool peab olema vähemalt 8 tähemärkki pikk";			
 			}		
 		}
 	}
@@ -102,8 +98,7 @@
 			
 			if ( strlen($_POST["signupPassword"]) < 8 ) {
 				
-				$signupPasswordError = "Parool peab olema vähemalt 8 tähemärkki pikk";
-				
+				$signupPasswordError = "Parool peab olema vähemalt 8 tähemärkki pikk";			
 			}		
 		}
 	}
@@ -170,13 +165,10 @@
 		//echo "parool ".$_POST["signupPassword"]."<br>";
 		//echo "räsi ".$password."<br>";
 		
-		//echo $serverPassword;
-	// KASUTAN FUNKTSIOONI
+	//	KASUTAN FUNKTSIOONI
 		$signupEmail = $Helper->cleanInput($signupEmail);
 		
 		$User->signUp($signupEmail, $Helper->cleanInput($password));
-		
-	
 	}
 	
 	
@@ -187,23 +179,18 @@
 		!empty($_POST["loginPassword"])
 	  ) {
 		  
-		$error = $User->login($Helper->cleanInput($_POST["loginEmail"]), $Helper->cleanInput($_POST["loginPassword"]));
-		
+		$error = $User->login($Helper->cleanInput($_POST["loginEmail"]), $Helper->cleanInput($_POST["loginPassword"]));		
 	}
 	
-	
-
 ?>	
 <?php require("../header.php"); ?>
 
 	<div class="container">
-	
 		<div class="row">
 		
 			<div class="col-sm-3">
 			<h1>Logi sisse</h1>
-
-		
+	
 		<form method="POST">
 			<p style="color:red;"><?=$error;?></p>
 			<label>E-post</label><br>
@@ -217,11 +204,10 @@
 			<br><br>
 						
 			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Logi sisse">
-
 		</form>	
 		</div>
 		
-			
+		
 		<div class="col-sm-3 col-sm-offset-3">
 		<h1>Loo kasutaja</h1>
 		
@@ -265,11 +251,8 @@
 			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Loo kasutaja">
 			
 				</form>
-			</div>
-							
+			</div>						
 		</div>
-		
 	</div>
-
 	</div>
 <?php require("../footer.php"); ?>
