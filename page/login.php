@@ -196,13 +196,11 @@
 			<label>E-post</label><br>
 			<input name="loginEmail" type="email" value="<?=$loginEmail;?>"> <?php echo $loginEmailError;?>
 			
-			<br><br>
-			
+			<br><br>	
 			<label>Parool</label><br>
 			<input name="loginPassword" type="password" value="<?=$loginPassword;?>"><?php echo $loginPasswordError;?>
 			
-			<br><br>
-						
+			<br><br>			
 			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Logi sisse">
 		</form>	
 		</div>
@@ -216,7 +214,6 @@
 			<input name="firstName" type="name" value="<?=$firstName;?>"> <?php echo $firstNameError; ?>
 			
 			<br><br>
-			
 			<label>Perekonnanimi</label><br>
 			<input name="lastName" type="name" value="<?=$lastName;?>"> <?php echo $lastNameError; ?>			
 			
@@ -232,19 +229,17 @@
 				<input type="radio" name="gender" value="female" checked> Naine<br>
 			 <?php } else { ?>
 				<input type="radio" name="gender" value="female" > Naine<br>
-			 <?php } ?>
+			 <?php } ?>	 
 			 
 			<br>
 			<label>E-post</label><br>
 			<input name="signupEmail" type="email" value="<?=$signupEmail;?>"> <?php echo $signupEmailError; ?>
 			
 			<br><br>
-			
 			<label>Parool</label><br>
 			<input name="signupPassword" type="password"> <?php echo $signupPasswordError; ?>
 			
 			<br><br>
-			
 			<label>Kinnita parool</label><br>
 			<input name="signupPassword" type="password"> <?php echo $signupPasswordError; ?> 
 			<br><br>						
