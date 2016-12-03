@@ -14,6 +14,7 @@
 		header("Location: data.php");
 		exit();	
 	}
+	
 
 	// MUUTUJAD
 	$firstName="";	
@@ -29,6 +30,7 @@
 	$loginEmailError = "";
 	$loginPassword = "";
 	$loginPasswordError = "";
+	
 	
 	// kas sisse logimisel oli e-post olemas
 	if ( isset ( $_POST["loginEmail"] ) ) {
@@ -57,7 +59,8 @@
 		} else {
 			
 			// email on õige, salvestan väärtuse muutujasse
-			$signupEmail = $_POST["signupEmail"];		
+			$signupEmail = $_POST["signupEmail"];
+			
 		}		
 	}
 	
@@ -77,7 +80,8 @@
 			
 			if ( strlen($_POST["loginPassword"]) < 8 ) {
 				
-				$loginPasswordError = "Parool peab olema vähemalt 8 tähemärkki pikk";			
+				$loginPasswordError = "Parool peab olema vähemalt 8 tähemärkki pikk";
+				
 			}		
 		}
 	}
@@ -98,7 +102,8 @@
 			
 			if ( strlen($_POST["signupPassword"]) < 8 ) {
 				
-				$signupPasswordError = "Parool peab olema vähemalt 8 tähemärkki pikk";			
+				$signupPasswordError = "Parool peab olema vähemalt 8 tähemärkki pikk";
+				
 			}		
 		}
 	}
@@ -165,10 +170,13 @@
 		//echo "parool ".$_POST["signupPassword"]."<br>";
 		//echo "räsi ".$password."<br>";
 		
-	//	KASUTAN FUNKTSIOONI
+		//echo $serverPassword;
+	// KASUTAN FUNKTSIOONI
 		$signupEmail = $Helper->cleanInput($signupEmail);
 		
 		$User->signUp($signupEmail, $Helper->cleanInput($password));
+		
+	
 	}
 	
 	
@@ -179,41 +187,56 @@
 		!empty($_POST["loginPassword"])
 	  ) {
 		  
-		$error = $User->login($Helper->cleanInput($_POST["loginEmail"]), $Helper->cleanInput($_POST["loginPassword"]));		
+		$error = $User->login($Helper->cleanInput($_POST["loginEmail"]), $Helper->cleanInput($_POST["loginPassword"]));
+		
 	}
 	
+	
+
 ?>	
 <?php require("../header.php"); ?>
 
 	<div class="container">
+	
 		<div class="row">
 		
 			<div class="col-sm-3">
 			<h1>Logi sisse</h1>
 	
+		<p class="forgotPassword">
+			<a data-label="unustasid-parooli" onclick="trackgavent($(this));
+			return false;"
+			href="forgotPassword.php? lang=1">Unustasid parooli?</a>
+		</p>
+		
 		<form method="POST">
 			<p style="color:red;"><?=$error;?></p>
 			<label>E-post</label><br>
 			<input name="loginEmail" type="email" value="<?=$loginEmail;?>"> <?php echo $loginEmailError;?>
 			
-			<br><br>	
+			<br><br>
+			
 			<label>Parool</label><br>
 			<input name="loginPassword" type="password" value="<?=$loginPassword;?>"><?php echo $loginPasswordError;?>
 			
-			<br><br>			
+			<br><br>
+						
 			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Logi sisse">
+
 		</form>	
 		</div>
 		
-		
+			
 		<div class="col-sm-3 col-sm-offset-3">
 		<h1>Loo kasutaja</h1>
 		
 		<form method="POST">
+		
 			<label>Eesnimi</label><br>
 			<input name="firstName" type="name" value="<?=$firstName;?>"> <?php echo $firstNameError; ?>
 			
 			<br><br>
+			
 			<label>Perekonnanimi</label><br>
 			<input name="lastName" type="name" value="<?=$lastName;?>"> <?php echo $lastNameError; ?>			
 			
@@ -229,25 +252,30 @@
 				<input type="radio" name="gender" value="female" checked> Naine<br>
 			 <?php } else { ?>
 				<input type="radio" name="gender" value="female" > Naine<br>
-			 <?php } ?>	 
+			 <?php } ?>
 			 
 			<br>
 			<label>E-post</label><br>
 			<input name="signupEmail" type="email" value="<?=$signupEmail;?>"> <?php echo $signupEmailError; ?>
 			
 			<br><br>
+			
 			<label>Parool</label><br>
 			<input name="signupPassword" type="password"> <?php echo $signupPasswordError; ?>
 			
 			<br><br>
+			
 			<label>Kinnita parool</label><br>
 			<input name="signupPassword" type="password"> <?php echo $signupPasswordError; ?> 
 			<br><br>						
 			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Loo kasutaja">
 			
 				</form>
-			</div>						
+			</div>
+							
 		</div>
+		
 	</div>
+
 	</div>
 <?php require("../footer.php"); ?>
