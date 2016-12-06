@@ -202,12 +202,6 @@
 		
 			<div class="col-sm-3">
 			<h1>Logi sisse</h1>
-	
-		<p class="forgotPassword">
-			<a data-label="unustasid-parooli" onclick="trackgavent($(this));
-			return false;"
-			href="forgotPassword.php? lang=1">Unustasid parooli?</a>
-		</p>
 		
 		<form method="POST">
 			<p style="color:red;"><?=$error;?></p>
@@ -219,7 +213,13 @@
 			<label>Parool</label><br>
 			<input name="loginPassword" type="password" value="<?=$loginPassword;?>"><?php echo $loginPasswordError;?>
 			
-			<br><br>
+			<br>
+			
+			<p class="forgotPassword">
+			<a data-label="unustasid-parooli" onclick="trackgavent($(this));
+			return false;"
+			href="forgotPassword.php? lang=1">Unustasid parooli?</a>
+			</p>
 						
 			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Logi sisse">
 
