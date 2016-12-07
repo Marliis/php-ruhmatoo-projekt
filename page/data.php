@@ -22,12 +22,23 @@
 		exit();
 	}
 	
+			$date =  new DateTime($_POST['date']);
+			$date =  $date->format('Y-m-d');
+	
 ?>
 <h1>Kasutaja andmed</h1>
 <p>
 	Tere tulemast <a href="user.php"><?=$_SESSION["userEmail"];?>!</a>
 	<a href="?logout=1">Logi välja</a>
 </p>
+
+<form method = "POST"> 
+
+		<label><h3>Tänane kuupäev</h3></label>
+		<input name="date" type="date" value="<?=$date;?>"><?php echo $dateError;?>
+		<br><br>
+		
+</form>
 
 
 <br>

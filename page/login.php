@@ -131,11 +131,11 @@
 	}
 	
 	
-	if ( isset($_POST["gender"] ) ) {
-		if ( empty( $_POST["gender"] ) ) {
+	if ( isset($_POST["signupName"] ) ) {
+		if ( empty( $_POST["signupName"] ) ) {
 			$signupNameError = "See väli on kohustuslik!";
 		} else {
-			$signupName = $_POST["gender"];
+			$signupName = $_POST["signupName"];
 		}
 	}
 	
