@@ -5,6 +5,10 @@
 	require("../class/Helper.class.php");
 	$Helper = new Helper();
 	
+	require("../class/Person.class.php");
+	$Person = new Person($mysqli);
+	
+	
 	//kui ei ole kasutaja id'd
 	if (!isset($_SESSION["userId"])){
 		
@@ -29,10 +33,6 @@
 	$weightError = "";
 	$height = "";
 	$heightError = "";
-	$training = "";
-	$trainingError = "";
-	$food = "";
-	$foodError = "";
 	
 	$msg = "";
 	if(isset($_SESSION["message"])){
@@ -45,21 +45,15 @@
 	if( isset($_POST["date"]) &&
 		isset($_POST["weight"]) &&
 		isset($_POST["height"]) &&
-		isset($_POST["training"]) &&
-		isset($_POST["food"]) &&
-		!empty($_POST["dateError"]) &&
-		!empty($_POST["weightError"]) &&
-		!empty($_POST["heightError"]) &&
-		!empty($_POST["trainingError"]) &&
-		!empty($_POST["foodError"])
+		!empty($_POST["date"]) &&
+		!empty($_POST["weight"]) &&
+		!empty($_POST["height"])
 	){
+		echo "siin";
 		
-		$Person->save($Helper->cleanInput($Helper->cleanInput($_POST["date"]), $_POST["weight"]), $Helper->cleanInput($_POST["height"]), $Helper->cleanInput($_POST["training"]), $Helper->cleanInput($_POST["food"]));
+		$Person->save($Helper->cleanInput($_POST["date"]), $_POST["weight"], $Helper->cleanInput($_POST["height"]));
 		
 	}
-	
-			
-	
 	
 		$date =  new DateTime($_POST['date']);
 		$date =  $date->format('Y-m-d');

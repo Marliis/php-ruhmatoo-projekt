@@ -11,16 +11,15 @@ class Person {
 	}
 	
 	
-	function save ($date, $weight, $height, $training, $food) {
+	function save ($date, $weight, $height) {
 			
 			//käsk
-			$stmt=$this->connection->prepare("INSERT INTO PersonData (date, weight, height, training, food) VALUES(?, ?, ?, ?, ?)");
+			$stmt=$this->connection->prepare("INSERT INTO PersonData (date, weight, height, user_id) VALUES(?, ?, ?, ?)");
 			
-			$stmt->bind_param("siiss", $date, $weight, $height, $training, $food);
 			
 			echo $this->connection->error;
 		
-			$stmt->bind_param("siiss", $date, $weight, $height, $training, $food);
+			$stmt->bind_param("siii", $date, $weight, $height, $_SESSION["userId"]);
 		
 			if($stmt->execute()) {
 				echo "salvestamine õnnestus";
