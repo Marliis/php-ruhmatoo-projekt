@@ -33,6 +33,7 @@
 	$weightError = "";
 	$height = "";
 	$heightError = "";
+	$error = "";
 	
 	$msg = "";
 	if(isset($_SESSION["message"])){
@@ -55,45 +56,55 @@
 		
 	}
 	
-		$date =  new DateTime($_POST['date']);
-		$date =  $date->format('Y-m-d');
+		$date =  new DateTime($_POST["date"]);
+		$date =  $date->format("Y-m-d");
 	
 ?>
-<h1>Kasutaja andmed</h1>
-<p>
-	Tere tulemast <a href="user.php">!</a>
-	<a href="?logout=1">Logi välja</a>
-</p>
 
-<form method = "POST"> 
+<?php require("../header.php"); ?>
 
-		<label><h3>Tänane kuupäev</h3></label>
-		<input name="date" type="date" value="<?=$date;?>"><?php echo $dateError;?>
-		<br><br>
+	<div class="container">
+	
+		<div class="row">
 		
-		<label>Sisesta kaal</label><br>
-		<input name="weight" type="weight" value="<?=$weight;?>"><?php echo $weightError;?>
-		<br><br>
+			<div class="col-sm-9">
+			<h1>Sinu treening- ja toitumispäevik</h1>
+			<p>
+			Tere tulemast <a href="user.php"><?=$_SESSION["userEmail"];?></a>, nüüd saad hakata oma andmeid sisestama!
+			<a href="?logout=1">Logi välja</a>
+			</p><br>
 		
-		<label>Sisesta pikkus</label><br>
-		<input name="height" type="height" value="<?=$height;?>"><?php echo $heightError;?>
-					
-		<p class="addFood">
-		<a data-label="Lisa söögikord" onclick="trackgavent($(this));
-		return false;"
-		href="addFood.php? lang=1">Lisa söögikord</a>
-		</p>
+		<form method="POST">
+			<p style="color:red;"><?=$error;?></p>
+			<label>Tänane kuupäev</label><br>
+			<input name="date" type="date" value="<?=$date;?>"><?php echo $dateError;?>
+			<br><br>
+		
+			<label>Kehakaal</label><br>
+			<input name="weight" type="weight" placeholder=kg value="<?=$weight;?>"><?php echo $weightError;?>
+			<br><br>
+		
+			<label>Pikkus</label><br>
+			<input name="height" type="height" placeholder=cm value="<?=$height;?>"><?php echo $heightError;?>
+			<br><br>
 			
-		<p class="addTraining">
-		<a data-label="Lisa treening" onclick="trackgavent($(this));
-		return false;"
-		href="addTraining.php? lang=1">Lisa treening</a>
-		</p>
-		
-		<input type="submit" value="Salvesta">
-</form>
+			<p class="addFood">
+			<a data-label="Lisa söögikord" onclick="trackgavent($(this));
+			return false;"
+			href="addFood.php? lang=1">Lisa söögikord</a>
+			</p>
+				
+			<p class="addTraining">
+			<a data-label="Lisa treening" onclick="trackgavent($(this));
+			return false;"
+			href="addTraining.php? lang=1">Lisa treening</a>
+			</p>
+			<br>
+			
+			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Logi sisse">
 
-
+		</form>	
+		</div>
 <br>
 <br>
 <br>

@@ -35,6 +35,7 @@
 	$drinksError = "";
 	$amount = "";
 	$amountError = "";
+	$error = "";
 	
 	$msg = "";
 	if(isset($_SESSION["message"])){
@@ -59,47 +60,59 @@
 		
 	}
 ?>
-<h1>Kasutaja andmed</h1>
-<p>
-	Tere tulemast <a href="addFood.php"><?=$_SESSION["userEmail"];?>!</a>
-	<a href="?logout=1">Logi välja</a>
-</p>
-	<br><br>
-	<label>Söögikord</label><br>
-	<select name="food">
-	<option value="" disabled selected>Vali söögikord</option>
-	<option value="Hommikusöök">Hommikusöök</option>
-	<option value="Vahepala">Vahepala</option>
-	<option value="Lõunasöök">Lõunasöök</option>
-	<option value="Õhtu-oode">Õhtu oode</option>
-	<option value="Õhtusöök">Õhtusöök</option>
 
-	</select>
-	
-	<input name="content" type="text" placeholder="Sisaldab">
-	
-	<br><br>
-	<label>Joogid</label><br>
-	<select name="drinks">
-	<option value="" disabled selected>Vali joogid</option>
-	<option value="Vesi">Vesi</option>
-	<option value="Piim">Piim</option>
-	<option value="Mahl">Mahl</option>
-	<option value="Jogurt">Jogurt</option>
-	<option value="Keefir">Keefir</option>
-	<option value="Kohv">Kohv</option>
-	<option value="Tee">Tee</option>
-	<option value="Karastusjook">Karastusjook</option>
-	<option value="Alkohoolne jook">Alkohoolne jook</option>
-	</select>
-	<input name="amount" type="text" placeholder="Sisesta kogus liitrites">
-	<br><br>
-	
-	<input type="submit" value="Salvesta">
-	
-</form>
+<?php require("../header.php"); ?>
 
+	<div class="container">
+	
+		<div class="row">
+		
+			<div class="col-sm-9">
+			<br>
+			<?=$msg;?>
+			<p>
+				<a href="addFood.php"><?=$_SESSION["userEmail"];?></a>
+			</p>
+			
+			<h1>Salvesta söögikordade andmed</h1>
+			
+		<form method="POST">
+		
+			<p style="color:red;"><?=$error;?></p>
+			<label>Söögikord</label><br>
+			<select name="food">
+			<option value="" disabled selected>Vali söögikord</option>
+			<option value="Hommikusöök">Hommikusöök</option>
+			<option value="Lõunaoode">Lõunaoode</option>
+			<option value="Lõunasöök">Lõunasöök</option>
+			<option value="Õhtuoode">Õhtuoode</option>
+			<option value="Õhtusöök">Õhtusöök</option>
 
+			</select>
+			
+			<input name="content" type="text" placeholder="Sisaldab">
+			
+			<br><br>
+			<label>Jook</label><br>
+			<select name="drinks">
+			<option value="" disabled selected>Vali jook</option>
+			<option value="Vesi">Vesi</option>
+			<option value="Piim">Piim</option>
+			<option value="Mahl">Mahl</option>
+			<option value="Jogurt">Jogurt</option>
+			<option value="Keefir">Keefir</option>
+			<option value="Kohv">Kohv</option>
+			<option value="Tee">Tee</option>
+			<option value="Karastusjook">Karastusjook</option>
+			<option value="Alkohoolne jook">Alkohoolne jook</option>
+			</select>
+			<input name="amount" type="text" placeholder="Sisesta kogus liitrites">
+			<br><br>
+		
+			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Salvesta">
+
+		</form>	
+		</div>
 <br>
 <br>
 <br>
