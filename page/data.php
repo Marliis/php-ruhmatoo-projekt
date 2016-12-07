@@ -83,15 +83,18 @@
 		
 		<label>Sisesta pikkus</label><br>
 		<input name="height" type="height" value="<?=$height;?>"><?php echo $heightError;?>
-		<br><br>
-		
-		<label>Lisa treening</label><br>
-		<input name="training" type="training" value="<?=$training;?>"><?php echo $trainingError;?>
-		<br><br>
-		
-		<label>Lisa söögikord</label><br>
-		<input name="food" type="food" value="<?=$food;?>"><?php echo $foodError;?>
-		<br><br>
+					
+		<p class="addFood">
+		<a data-label="Lisa söögikord" onclick="trackgavent($(this));
+		return false;"
+		href="addFood.php? lang=1">Lisa söögikord</a>
+		</p>
+			
+		<p class="addTraining">
+		<a data-label="Lisa treening" onclick="trackgavent($(this));
+		return false;"
+		href="addTraining.php? lang=1">Lisa treening</a>
+		</p>
 		
 		<input type="submit" value="Salvesta">
 </form>
