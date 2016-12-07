@@ -81,8 +81,23 @@ class User {
 		}
 		
 		$stmt->close();
+	}
+	
+	function savePeople ($date, $weight, $heigth) {
 		
+		$mysqli = new mysqli($GLOBALS["serverHost"],$GLOBALS["serverUsername"],$GLOBALS["serverPassword"],$GLOBALS["database"]);
+
+		$stmt = $mysqli->prepare("INSERT INTO PersonData (date, weight, height) VALUES (?, ?, ?)");
 		
+		echo $mysqli->error;
+		
+		$stmt->bind_param("sii", $date, $weight, $heigth);
+		
+		if ($stmt->execute()) {
+			echo "Salvestamine õnnestus";
+		} else {
+			echo "ERROR ".$stmt->error;
+		}
 	}
 	
 } 
