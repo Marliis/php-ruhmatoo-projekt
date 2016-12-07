@@ -3,7 +3,7 @@ class Athlete {
 	
 	private $connection;
 	
-	function __construct($mysqli){
+	function __construct($mysqli) {
 		
 	$this->connection = $mysqli;
 		

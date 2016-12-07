@@ -6,7 +6,7 @@
 	$Helper = new Helper();
 	
 	require("../class/Athlete.class.php");
-	$Athlete = new Athlete();
+	$Athlete = new Athlete($mysqli);
 
 	
 	//kui ei ole kasutaja id'd
