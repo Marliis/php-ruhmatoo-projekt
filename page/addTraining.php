@@ -65,7 +65,7 @@
 			<p>
 				<a href="addTraining.php"><?=$_SESSION["userEmail"];?></a>
 			</p>
-			
+			<h3><a href="data.php"> < Mine tagasi</a></h3>
 			<h1>Salvesta treeningu andmed</h1>
 			
 		<form method="POST">
