@@ -10,16 +10,16 @@ class Athlete {
 	}
 
 
-	function saveAthlete ($TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment) {
+	function saveAthlete ($TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment, $comment, $created) {
 			
 			//käsk
-			$stmt=$this->connection->prepare("INSERT INTO AthleteData_2 (TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment) VALUES(?, ?, ?, ?, ?)");
+			$stmt=$this->connection->prepare("INSERT INTO AthleteData_2 (TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment, $created) VALUES(?, ?, ?, ?, ?, ?)");
 			
-			$stmt->bind_param("siiss", $TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment);
+			$stmt->bind_param("siissi", $TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment, $created);
 			
 			echo $this->connection->error;
 		
-			$stmt->bind_param("siiss", $TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment);
+			$stmt->bind_param("siissi", $TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment, $created);
 		
 			if($stmt->execute()) {
 				echo "salvestamine õnnestus";
@@ -32,10 +32,10 @@ class Athlete {
 	}		
 		
 	
-	function update($id, $TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment){
+	function update($id, $TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment, $created){
     	
-		$stmt = $this->connection->prepare("UPDATE AthleteData_2 SET TypeOfTraining=?, WorkoutHours=?, Kilometers=?, feeling=?, comment=? WHERE id=? AND deleted IS NULL");
-		$stmt->bind_param("siissi", $TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment, $id);
+		$stmt = $this->connection->prepare("UPDATE AthleteData_2 SET TypeOfTraining=?, WorkoutHours=?, Kilometers=?, feeling=?, comment=?, created=? WHERE id=? AND deleted IS NULL");
+		$stmt->bind_param("siissii", $TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment, $id, $created);
 		
 		// kas õnnestus salvestada
 		if($stmt->execute()){

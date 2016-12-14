@@ -1,5 +1,5 @@
 <?php 
-	
+
 	require("../functions.php");
 	
 	require("../class/Helper.class.php");
@@ -8,7 +8,6 @@
 	require("../class/Person.class.php");
 	$Person = new Person($mysqli);
 	
-	
 	//kui ei ole kasutaja id'd
 	if (!isset($_SESSION["userId"])){
 		
@@ -16,8 +15,7 @@
 		header("Location: login.php");
 		exit();
 	}
-	
-	
+		
 	//kui on ?logout aadressireal siis login välja
 	if (isset($_GET["logout"])) {
 		
@@ -25,8 +23,7 @@
 		header("Location: login.php");
 		exit();
 
-	}
-	
+	}	
 	$date = "";
 	$dateError = "";
 	$weight = "";
@@ -49,11 +46,10 @@
 		!empty($_POST["date"]) &&
 		!empty($_POST["weight"]) &&
 		!empty($_POST["height"])
-	){
-		echo "siin";
+	  ) {
+//		echo "siin";
 		
-		$Person->save($Helper->cleanInput($_POST["date"]), $_POST["weight"], $Helper->cleanInput($_POST["height"]));
-		
+		$Person->save($Helper->cleanInput($_POST["date"]), $Helper->cleanInput($_POST["weight"]), $Helper->cleanInput($_POST["height"]));
 	}
 	
 		$date =  new DateTime($_POST["date"]);
@@ -99,9 +95,12 @@
 			return false;"
 			href="addTraining.php? lang=1">Lisa treening</a>
 			</p>
-			<br>
 			
+
 			<input class="btn btn-success btn-sm hidden-xs" style = "background-color:blue" type="submit" value="Logi sisse">
+
+			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Salvesta">
+
 
 		</form>	
 		</div>
