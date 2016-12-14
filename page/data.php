@@ -95,9 +95,6 @@
 			return false;"
 			href="addTraining.php? lang=1">Lisa treening</a>
 			</p>
-			
-
-			<input class="btn btn-success btn-sm hidden-xs" style = "background-color:blue" type="submit" value="Logi sisse">
 
 			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Salvesta">
 
