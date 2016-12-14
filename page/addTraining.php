@@ -3,12 +3,10 @@
 	require("../functions.php");
 	
 	require("../class/Helper.class.php");
-	$Helper = new Helper();
+	$Helper = new Helper($mysqli);
 	
 	require("../class/Athlete.class.php");
 	$Athlete = new Athlete($mysqli);
-	
-	$error = "";
 
 	
 	//kui ei ole kasutaja id'd
@@ -26,6 +24,19 @@
 		header("Location: login.php");
 		exit();
 	}
+	
+	$TypeOfTraining = "";
+	$WorkoutHours = "";
+	$Kilometers = "";
+	$feeling = "";
+	$comment = "";
+	$TypeOfTrainingError = "";
+	$WorkoutHoursError = "";
+	$KilometersError = "";
+	$feelingError = "";
+	$commentError = "";
+	$error = "";
+	
 	$msg = "";
 	if(isset($_SESSION["message"])){
 		$msg = $_SESSION["message"];
@@ -34,25 +45,24 @@
 		unset($_SESSION["message"]);
 	}
 	
-	
+	var_dump($_POST);
 	if (isset($_POST["TypeOfTraining"]) && 
 		isset($_POST["WorkoutHours"]) &&
 		isset($_POST["Kilometers"]) && 
  		isset($_POST["feeling"]) && 
  		isset($_POST["comment"]) && 
-		!empty($_POST["TypeOfTraining"]) && 
-		!empty($_POST["WorkoutHours"]) && 
-		!empty($_POST["Kilometers"]) && 
-		!empty($_POST["feeling"]) && 
-		!empty($_POST["comment"]) 
+		empty($TypeOfTraining) && 
+		empty($WorkoutHours) && 
+		empty($Kilometers) && 
+		empty($feeling) && 
+		empty($comment) 
 	  ) {
 		 
-		$Athlete->saveAthlete($Helper->cleanInput($_POST["TypeOfTraining"]), $Helper->cleanInput($_POST["WorkoutHours"]), $Helper->cleanInput($_POST["Kilometers"]), $Helper->cleanInput($_POST["feeling"]), $Helper->cleanInput($_POST["comment"]));
+		$Athlete->saveAthlete($Helper->cleanInput($_POST["TypeOfTraining"]), $_POST["WorkoutHours"], ($_POST["Kilometers"]), $_POST["feeling"], ($_POST["comment"]));
 		
 	}
-
-
 ?>
+
 <?php require("../header.php"); ?>
 
 	<div class="container">

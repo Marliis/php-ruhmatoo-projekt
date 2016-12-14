@@ -39,7 +39,7 @@
 		//kui ühe näitame siis kustuta ära, et pärast refreshi ei näitaks
 		unset($_SESSION["message"]);
 	}
-	
+	//var_dump($_POST);
 	if( isset($_POST["date"]) &&
 		isset($_POST["weight"]) &&
 		isset($_POST["height"]) &&
@@ -47,14 +47,12 @@
 		!empty($_POST["weight"]) &&
 		!empty($_POST["height"])
 	  ) {
+		  
 //		echo "siin";
-		
-		$Person->save($Helper->cleanInput($_POST["date"]), $Helper->cleanInput($_POST["weight"]), $Helper->cleanInput($_POST["height"]));
-	}
-	
 		$date =  new DateTime($_POST["date"]);
 		$date =  $date->format("Y-m-d");
-	
+		$Person->save($Helper->cleanInput($date), $Helper->cleanInput($_POST["weight"]), $Helper->cleanInput($_POST["height"]));
+	}
 ?>
 
 <?php require("../header.php"); ?>

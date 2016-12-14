@@ -6,7 +6,7 @@
 	$Food = new Food($mysqli);
 	
 	require("../class/Helper.class.php");
-	$Helper = new Helper();
+	$Helper = new Helper($mysqli);
 	
 	
 	//kui ei ole kasutaja id'd
@@ -44,19 +44,18 @@
 		//kui ühe näitame siis kustuta ära, et pärast refreshi ei näitaks
 		unset($_SESSION["message"]);
 	}
-	
-	if( isset($_POST[""]) &&
-		isset($_POST["food"]) &&
+	var_dump($_POST);
+	if( isset($_POST["food"]) &&
 		isset($_POST["content"]) &&
 		isset($_POST["drinks"]) &&
 		isset($_POST["amount"]) &&
-		!empty($_POST["foodError"]) &&
-		!empty($_POST["contentError"]) &&
-		!empty($_POST["drinksError"]) &&
-		!empty($_POST["amountError"]) 
+		empty($foodError) &&
+		empty($contentError) &&
+		empty($drinksError) &&
+		empty($amountError) 
 	){
 		
-		$Person->save($Helper->cleanInput($Helper->cleanInput($_POST["food"]), $_POST["content"],($_POST["drinks"]), $_POST["amount"]));
+		$Food->saveFood($Helper->cleanInput($_POST["food"]), $_POST["content"],($_POST["drinks"]), $_POST["amount"]);
 		
 	}
 ?>

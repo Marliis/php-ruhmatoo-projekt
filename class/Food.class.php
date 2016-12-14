@@ -13,20 +13,16 @@ class Food {
 	/*TEISED FUNKTSIOONID*/
 	
 	function saveFood ($food, $content, $drinks, $amount) {
-		
-		
 
-		$stmt =  $this->connection->prepare("INSERT INTO FoodData (food, content, drinks, amount) VALUES (?,?)");
+		$stmt =  $this->connection->prepare("INSERT INTO FoodData (food, content, drinks, amount, user_id) VALUES (?, ?, ?, ?, ?)");
 
-		$stmt->bind_param("ssss", $food, $content, $drinks, $amount);
+		$stmt->bind_param("sssdi", $food, $content, $drinks, $amount, $_SESSION["userId"]);
 		
 		echo $this->connection->error;
-		
-		$stmt->bind_param("ssss", $food, $content, $drinks, $amount);
 
 		if ($stmt->execute()) {
 
-			echo "salvestamine õnnestus";
+			echo "SALVESTAMINE ÕNNESTUS!";
 
 		} else {
 
@@ -39,13 +35,13 @@ class Food {
 		
 	function update($id, $food, $content, $drinks, $amount) {
 		
-		$stmt = $this->connection->prepare("UPDATE FoodData SET food=?, content=?, drinks=?, amount=? WHERE id=? AND delete IS NULL");
-		$stmt->bind_param("ss", $food, $content, $drinks, $amount);
+		$stmt = $this->connection->prepare("UPDATE FoodData SET food=?, content=?, drinks=?, amount=? WHERE id=? AND deleted IS NULL");
+		$stmt->bind_param("sssdi", $food, $content, $drinks, $amount, $id);
 		
 		//kas onnestus salvestada
 		if($stmt->execuse()){
 			//onnestus
-			echo "salvestus onnestus!";
+			echo "SALVESTAMINE ÕNNESTUS!";
 		}
 		
 		$stmt->close();
