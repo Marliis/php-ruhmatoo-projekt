@@ -101,7 +101,7 @@
 			</p>
 			<br>
 			
-			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Logi sisse">
+			<input class="btn btn-success btn-sm hidden-xs" style = "background-color:blue" type="submit" value="Logi sisse">
 
 		</form>	
 		</div>
