@@ -94,6 +94,12 @@
 			href="addTraining.php? lang=1">Lisa treening</a>
 			</p>
 
+			<p class="addTraining">
+			<a data-label="Lisa treening" onclick="trackgavent($(this));
+			return false;"
+			href="checkTraining.php? lang=1">Vaata tulemusi</a>
+			</p>
+
 			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Salvesta">
 
 
