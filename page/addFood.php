@@ -8,7 +8,8 @@
 	require("../class/Helper.class.php");
 	$Helper = new Helper($mysqli);
 	
-	
+	require("../css.php");
+
 	//kui ei ole kasutaja id'd
 	if (!isset($_SESSION["userId"])){
 		
@@ -61,6 +62,8 @@
 ?>
 
 <?php require("../header.php"); ?>
+
+	<body class="addFood_background" background="../addFood_page.jpeg">
 
 	<div class="container">
 	

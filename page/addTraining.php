@@ -8,6 +8,7 @@
 	require("../class/Athlete.class.php");
 	$Athlete = new Athlete($mysqli);
 
+	require("../css.php");
 	
 	//kui ei ole kasutaja id'd
 	if (!isset($_SESSION["userId"])){
@@ -64,6 +65,8 @@
 ?>
 
 <?php require("../header.php"); ?>
+
+	<body class="addTraining_background" background="../addTraining_page.jpeg">
 
 	<div class="container">
 	
