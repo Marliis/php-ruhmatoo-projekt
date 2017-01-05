@@ -8,6 +8,8 @@
 	require("../class/Helper.class.php");
 	$Helper=new Helper($mysqli);
 	
+	require("../css.php");
+
 	//kas kasutaja on sisse logitud
 	if (isset ($_SESSION["userId"])) {
 		
@@ -201,7 +203,7 @@
 		<div class="row">
 		
 			<div class="col-sm-3">
-			<h1>Logi sisse</h1>
+			<h1>LOGI SISSE</h1>
 		
 		<form method="POST">
 			<p style="color:red;"><?=$error;?></p>
@@ -226,9 +228,10 @@
 		</form>	
 		</div>
 		
-			
+		<body class="background" background="../first_page.jpeg">
+
 		<div class="col-sm-3 col-sm-offset-3">
-		<h1>Loo kasutaja</h1>
+		<h1>LOO KASUTAJA</h1>
 		
 		<form method="POST">
 		

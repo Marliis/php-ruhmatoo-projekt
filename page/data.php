@@ -8,6 +8,8 @@
 	require("../class/Person.class.php");
 	$Person = new Person($mysqli);
 	
+	require("../css.php");
+
 	//kui ei ole kasutaja id'd
 	if (!isset($_SESSION["userId"])){
 		
@@ -56,6 +58,8 @@
 ?>
 
 <?php require("../header.php"); ?>
+
+	<body class="data_background" background="../data_page.jpeg" style="max-height:70px; max-width:94%;">
 
 	<div class="container">
 	
