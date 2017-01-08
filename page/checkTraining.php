@@ -1,5 +1,6 @@
 	<?php 
-	
+	$sql_text = "";
+	$msg = "";
 	require("../functions.php");
 	
 	require("../class/Results.class.php");

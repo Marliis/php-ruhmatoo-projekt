@@ -25,7 +25,7 @@
 		header("Location: login.php");
 		exit();
 	}
-	
+
 	$TypeOfTraining = "";
 	$WorkoutHours = "";
 	$Kilometers = "";
@@ -37,7 +37,7 @@
 	$feelingError = "";
 	$commentError = "";
 	$error = "";
-	
+
 	$msg = "";
 	if(isset($_SESSION["message"])){
 		$msg = $_SESSION["message"];
@@ -51,12 +51,12 @@
 		isset($_POST["WorkoutHours"]) &&
 		isset($_POST["Kilometers"]) && 
  		isset($_POST["feeling"]) && 
- 		isset($_POST["comment"]) && 
-		empty($TypeOfTraining) && 
-		empty($WorkoutHours) && 
-		empty($Kilometers) && 
-		empty($feeling) && 
-		empty($comment) 
+ 		isset($_POST["comment"]) &&
+		empty($TypeOfTraining) &&
+		empty($WorkoutHours) &&
+		empty($Kilometers) &&
+		empty($feeling) &&
+		empty($comment)
 	  ) {
 		 
 		$Athlete->saveAthlete($Helper->cleanInput($_POST["TypeOfTraining"]), $_POST["WorkoutHours"], ($_POST["Kilometers"]), $_POST["feeling"], ($_POST["comment"]));
@@ -112,7 +112,7 @@
 			
 			<br><br>
 			<label>Enesetunne</label><br>
-			<select name="feeling"> 
+			<select name="feeling">
 			<option value="Vali sobiv">Vali sobiv</option>
 			<option value="Suurepärane">Suurepärane</option>
 			<option value="Hea">Hea</option>
