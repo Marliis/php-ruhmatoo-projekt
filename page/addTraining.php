@@ -110,7 +110,7 @@
 			
 			<br><br>
 			<label>Enesetunne</label><br>
-			<select name="Enesetunne"> 
+			<select name="feeling"> 
 			<option value="Vali sobiv">Vali sobiv</option>
 			<option value="Suurepärane">Suurepärane</option>
 			<option value="Hea">Hea</option>
