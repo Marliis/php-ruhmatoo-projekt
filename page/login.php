@@ -228,7 +228,7 @@
 		</form>	
 		</div>
 		
-		<body class="background" background="../first_page.jpeg">
+		<body class="background" background="../first_page_2.jpeg">
 
 		<div class="col-sm-3 col-sm-offset-3">
 		<h1>LOO KASUTAJA</h1>

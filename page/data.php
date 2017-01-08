@@ -86,6 +86,9 @@
 			<input name="height" type="height" placeholder=cm value="<?=$height;?>"><?php echo $heightError;?>
 			<br><br>
 			
+			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Salvesta">
+			<br><br>
+
 			<p class="addFood">
 			<a data-label="Lisa söögikord" onclick="trackgavent($(this));
 			return false;"
@@ -103,8 +106,6 @@
 			return false;"
 			href="checkTraining.php? lang=1">Vaata tulemusi</a>
 			</p>
-
-			<input class="btn btn-success btn-sm hidden-xs" type="submit" value="Salvesta">
 
 
 		</form>	

@@ -66,7 +66,7 @@
 
 <?php require("../header.php"); ?>
 
-	<body class="addTraining_background" background="../addTraining_page.jpeg">
+	<body class="addTraining_background" background="../add_checkTraining_page_2.jpeg">
 
 	<div class="container">
 	
@@ -74,7 +74,9 @@
 		
 			<div class="col-sm-9">
 			<br>
-			<?=$msg;?>
+			<?
+			$msg;
+			?>
 			<p>
 				<a href="addTraining.php"><?=$_SESSION["userEmail"];?></a>
 			</p>
