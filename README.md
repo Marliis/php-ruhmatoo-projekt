@@ -23,13 +23,13 @@ ANDMEBAASI SKEEM:
 
 TABELITE LOOMISE SQL LAUSED:
 
-CREATE TABLE user (
-  id INT NOT NULL, AUTO_INCREMENT PRIMARY KEY,
-  firstName VARCHAR(200) NOT NULL,
-  lastName VARCHAR(200) NOT NULL,
-  Email VARCHAR(255) NOT NULL,
-  password VARCHAR(128) DEFAULT NULL,
-  Gender VARCHAR(10) NOT NULL
+<span class="pl-k">CREATE</span> <span class="pl-k">TABLE</span> <span class="pl-en">user</span> (
+  id <span class="pl-k">INT</span> <span class="pl-k">NOT NULL</span> AUTO_INCREMENT <span class="pl-k">PRIMARY KEY</span>,
+  firstName <span class="pl-k">VARCHAR</span>(<span class="pl-c1">200</span>) <span class="pl-k">NOT NULL</span>,
+  lastName <span class="pl-k">VARCHAR</span>(<span class="pl-c1">200</span>) <span class="pl-k">NOT NULL</span>,
+  Email <span class="pl-k">VARCHAR</span>(<span class="pl-c1">255</span>) <span class="pl-k">NOT NULL</span>,
+  password <span class="pl-k">VARCHAR</span>(<span class="pl-c1">128</span>) <span class="pl-k">DEFAULT NULL</span>,
+  Gender <span class="pl-k">VARCHAR</span>(<span class="pl-c1">10</span>) <span class="pl-k">NOT NULL</span>
 );
 
 KOKKUVÕTE - Mida õppisid juurde? Mis ebaõnnestus? Mis oli keeruline?
