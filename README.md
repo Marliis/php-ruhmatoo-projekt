@@ -2,9 +2,9 @@
 
 PROJEKTI NIMI - MINU TERVISEPÄEVIK
 
-LIIKMED - Marliis Odamus, Eliise Piiritalo, Regiina Krivulina
+LIIKMED - Marliis Odamus, Eliise Piiritalo, Regiina Krivulina, Geithy Plakk
 
-EESMÄRK - Treeningu ja toitumise analüüsimine. Inimestel on võimalus endale kasutaja luua ning oma treening- ja toitumisandmeid sisestada ja analüüsida(nädala/kuu kokkuvõtted).
+EESMÄRK - Treeningu ja toitumise analüüsimine. Inimestel on võimalus endale kasutaja luua ning oma treening- ja toitumisandmeid sisestada ja analüüsida (päevade kokkuvõtted).
 
 KIRJELDUS - Rühmatöö eeskujuks võtsime "Terve Eesti Eest" treeningpäeviku. Veebiportaalis saab määrata enda igapäevase liikumistegevuse algus- ja lõppajad. Võimalus vaadata päeviku graafikut, mis näitab visuaalselt kalorite kulu. Graafiku perioodi saab valida klikates nupule "Vali periood". Samuti on võimalus lisada uusi tegevusi valides kõrvalolevast kalendrist päeva, mille tulemusi soovitakse sisestada.
 Teise rakendusena võtsime eeskujuks "Nutridata Toitumisprogramm". NutriData toitumisprogramm võimaldab analüüsida menüü energia- ja toitainete sisalduse vastavust Eesti riiklikele ea- ja soopõhistele toitumissoovitustele.
@@ -16,13 +16,18 @@ v0.3 Saab lisada toidukorra
 v0.4 Saab näha enda tulemusi
 
 
-KOKKUVÕTE
+KOKKUVÕTE - Mida õppisid juurde? Mis ebaõnnestus? Mis oli keeruline?
 
-Marliis - 
+Marliis:
+Juurde õppisin lehe kujundamist ning nägin, kui kaua võtab ühe lehekülje tegemine tegelikult aega. Samuti polnud ma varem kasutanud GitHub'i ega andmebaasi.
+Ebaõnnestus see, et me ei osanud kõiki esialgselt plaanitud funktsioone tööle saada.
+Keeruline oli tulemuste lehe tööle saamine ja erinevate errorite lahendamine.
 
 Eliise -
 
 Regiina -
+
+Geithy -
 
 
 **Rühmatööde demo päev** on valitud eksamipäev jaanuaris, kuhu tullakse terve rühmaga koos!
