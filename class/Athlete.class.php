@@ -13,9 +13,9 @@ class Athlete {
 	function saveAthlete ($TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment) {
 			
 			//käsk
-			$stmt=$this->connection->prepare("INSERT INTO AthleteData_2 (TypeOfTraining, WorkoutHours, Kilometers, feeling, comment, user_id) VALUES(?, ?, ?, ?, ?, ?)");
+			$stmt=$this->connection->prepare("INSERT INTO AthleteData_2 (TypeOfTraining, WorkoutHours, Kilometers, feeling, comment, created, user_id) VALUES(?, ?, ?, ?, ?, ?, ?)");
 			
-			$stmt->bind_param("sddssi", $TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment, $created, $_SESSION["userId"]);
+			$stmt->bind_param("siissii", $TypeOfTraining, $WorkoutHours, $Kilometers, $feeling, $comment, $created, $_SESSION["userId"]);
 			
 			echo $this->connection->error;
 		

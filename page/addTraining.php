@@ -46,7 +46,7 @@
 		unset($_SESSION["message"]);
 	}
 	
-	var_dump($_POST);
+	//var_dump($_POST);
 	if (isset($_POST["TypeOfTraining"]) && 
 		isset($_POST["WorkoutHours"]) &&
 		isset($_POST["Kilometers"]) && 

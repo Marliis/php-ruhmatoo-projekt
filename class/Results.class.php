@@ -48,7 +48,7 @@ class Food {
 		$array = "";
 
 		// toit arraysse
-		$sql = "SELECT user_id, food, content, drinks, amount, created FROM FoodData WHERE user_id = " . $_SESSION["userId"] . $sql_extra;
+		$sql = "SELECT user_id, food, content, drinks, amount, created FROM FoodData WHERE user_id = " . $_SESSION["userId"];
 		$result = $this->connection->query($sql);
 		if ($result->num_rows > 0) {
 		    // iga toit arraysse
@@ -70,7 +70,7 @@ class Food {
 		}
 
 		// persondata arraysse
-		$sql = "SELECT user_id, weight, height, created FROM PersonData WHERE user_id = " . $_SESSION["userId"] . $sql_extra;
+		$sql = "SELECT user_id, weight, height, created FROM PersonData WHERE user_id = " . $_SESSION["userId"];
 		$result = $this->connection->query($sql);
 		if ($result->num_rows > 0) {
 			// iga persondata arraysse
@@ -90,7 +90,7 @@ class Food {
 		}
 
 		// treenngud arraysse
-		$sql = "SELECT user_id, TypeOfTraining, WorkoutHours, Kilometers, feeling, comment, created FROM AthleteData_2 WHERE user_id = " . $_SESSION["userId"] . $sql_extra;
+		$sql = "SELECT user_id, TypeOfTraining, WorkoutHours, Kilometers, feeling, comment, created FROM AthleteData_2 WHERE user_id = " . $_SESSION["userId"];
 		$result = $this->connection->query($sql);
 		if ($result->num_rows > 0) {
 			// iga treening arraysse
