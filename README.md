@@ -60,13 +60,13 @@ TABELITE LOOMISE SQL LAUSED:
 );</pre></div>
 
 <div class="highlight highlight-source-sql"><pre><span class="pl-k">CREATE</span> <span class="pl-k">TABLE</span> <span class="pl-en">AthleteData_2</span> (
-  id <span class="pl-k">INT</span>(<span class="pl-c1">11</span>) <span class="pl-k">NOT NULL</span>,,
-  user_id <span class="pl-k">INT</span>(<span class="pl-c1">11</span>) <span class="pl-k">NOT NULL</span>,,
-  TypeOfTraining <span class="pl-k">VARCHAR</span>(<span class="pl-c1">20</span>) <span class="pl-k">NOT NULL</span>,,
-  WorkoutHour <span class="pl-k">FLOAT</span><span class="pl-k">NOT NULL</span>,,
-  Kilometers <span class="pl-k">FLOAT</span><span class="pl-k">NOT NULL</span>,,
-  feeling <span class="pl-k">VARCHAR</span>(<span class="pl-c1">20</span>) <span class="pl-k">NOT NULL</span>,,
-  comment <span class="pl-k">VARCHAR</span>(<span class="pl-c1">255</span>) <span class="pl-k">NOT NULL</span>,,
+  id <span class="pl-k">INT</span>(<span class="pl-c1">11</span>) <span class="pl-k">NOT NULL</span>,
+  user_id <span class="pl-k">INT</span>(<span class="pl-c1">11</span>) <span class="pl-k">NOT NULL</span>,
+  TypeOfTraining <span class="pl-k">VARCHAR</span>(<span class="pl-c1">20</span>) <span class="pl-k">NOT NULL</span>,
+  WorkoutHour <span class="pl-k">FLOAT</span><span class="pl-k">NOT NULL</span>,
+  Kilometers <span class="pl-k">FLOAT</span><span class="pl-k">NOT NULL</span>,
+  feeling <span class="pl-k">VARCHAR</span>(<span class="pl-c1">20</span>) <span class="pl-k">NOT NULL</span>,
+  comment <span class="pl-k">VARCHAR</span>(<span class="pl-c1">255</span>) <span class="pl-k">NOT NULL</span>,
   created <span class="pl-k">TIMESTAMP</span><span class="pl-k">NOT NULL</span><span class="pl-k">DEFAULT</span><span class="pl-k">CURRENT_TIMESTAMP</span><span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
 );</pre></div>
 
