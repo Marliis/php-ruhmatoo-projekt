@@ -19,7 +19,7 @@ v0.3 Saab lisada toidukorra
 v0.4 Saab näha enda tulemusi
 
 ANDMEBAASI SKEEM:
-
+![screen shot 2017-01-09 at 21 06 26](https://cloud.githubusercontent.com/assets/22045695/21779264/9037f538-d6af-11e6-9c02-5541a8dd6140.png)
 
 KOKKUVÕTE - Mida õppisid juurde? Mis ebaõnnestus? Mis oli keeruline?
 
