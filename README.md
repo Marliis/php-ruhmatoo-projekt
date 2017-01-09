@@ -74,7 +74,7 @@ KOKKUVÕTE - Mida õppisid juurde? Mis ebaõnnestus? Mis oli keeruline?
 
 Marliis:
 Juurde õppisin lehe kujundamist ning nägin, kui kaua võtab ühe veebilehekülje tegemine tegelikult aega. Samuti polnud ma varem kasutanud GitHub'i ega andmebaasi.
-Ebaõnnestus see, et me ei osanud kõiki esialgselt plaanitud funktsioone tööle saada.
+Ebaõnnestus see, et me ei osanud kõiki esialgselt plaanitud funktsioone tööle saada, kuna need osutusid liiga keerulisteks.
 Keeruline oli tulemuste lehe tööle saamine ja erinevate errorite lahendamine.
 
 Eliise -
