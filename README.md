@@ -2,6 +2,9 @@
 
 PROJEKTI NIMI - MINU TERVISEPÄEVIK
 
+PROJEKTI VEEBIRAKENDUSE PILT:
+![screen shot 2017-01-09 at 20 41 32](https://cloud.githubusercontent.com/assets/22045695/21778683/148fb440-d6ad-11e6-94a6-035350a6df2a.png)
+
 LIIKMED - Marliis Odamus, Eliise Piiritalo, Regiina Krivulina, Geithy Plakk
 
 EESMÄRK - Treeningu ja toitumise analüüsimine. Inimestel on võimalus endale kasutaja luua ning oma treening- ja toitumisandmeid sisestada ja analüüsida (päevade kokkuvõtted).
@@ -15,11 +18,13 @@ v0.2 Saab lisada treeningandmed
 v0.3 Saab lisada toidukorra
 v0.4 Saab näha enda tulemusi
 
+ANDMEBAASI SKEEM:
+
 
 KOKKUVÕTE - Mida õppisid juurde? Mis ebaõnnestus? Mis oli keeruline?
 
 Marliis:
-Juurde õppisin lehe kujundamist ning nägin, kui kaua võtab ühe lehekülje tegemine tegelikult aega. Samuti polnud ma varem kasutanud GitHub'i ega andmebaasi.
+Juurde õppisin lehe kujundamist ning nägin, kui kaua võtab ühe veebilehekülje tegemine tegelikult aega. Samuti polnud ma varem kasutanud GitHub'i ega andmebaasi.
 Ebaõnnestus see, et me ei osanud kõiki esialgselt plaanitud funktsioone tööle saada.
 Keeruline oli tulemuste lehe tööle saamine ja erinevate errorite lahendamine.
 
