@@ -21,6 +21,17 @@ v0.4 Saab näha enda tulemusi
 ANDMEBAASI SKEEM:
 ![screen shot 2017-01-09 at 21 06 26](https://cloud.githubusercontent.com/assets/22045695/21779264/9037f538-d6af-11e6-9c02-5541a8dd6140.png)
 
+TABELITE LOOMISE SQL LAUSED:
+
+CREATE TABLE user (
+  id INT NOT NULL, AUTO_INCREMENT PRIMARY KEY,
+  firstName VARCHAR(200) NOT NULL,
+  lastName VARCHAR(200) NOT NULL,
+  Email VARCHAR(255) NOT NULL,
+  password VARCHAR(128) DEFAULT NULL,
+  Gender VARCHAR(10) NOT NULL
+);
+
 KOKKUVÕTE - Mida õppisid juurde? Mis ebaõnnestus? Mis oli keeruline?
 
 Marliis:
