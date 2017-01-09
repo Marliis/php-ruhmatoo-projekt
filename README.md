@@ -36,7 +36,7 @@ TABELITE LOOMISE SQL LAUSED:
   id <span class="pl-k">INT</span>(<span class="pl-c1">11</span>) <span class="pl-k">NOT NULL</span>,
   Email <span class="pl-k">VARCHAR</span>(<span class="pl-c1">255</span>) <span class="pl-k">NOT NULL</span>,
   password <span class="pl-k">VARCHAR</span>(<span class="pl-c1">128</span>) <span class="pl-k">DEFAULT NULL</span>,
-  created <span class="pl-k">TIMESTAMP</span><span class="pl-k">NULL</span><span class="pl-k">DEFAULT</span><span class="pl-k">CURRENT_TIMESTAMP</span>
+  created <span class="pl-k">TIMESTAMP</span> <span class="pl-k">NULL</span> <span class="pl-k">DEFAULT</span> <span class="pl-k">CURRENT_TIMESTAMP</span> <span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
 );</pre></div>
 
 <div class="highlight highlight-source-sql"><pre><span class="pl-k">CREATE</span> <span class="pl-k">TABLE</span> <span class="pl-en">PersonData</span> (
@@ -45,7 +45,7 @@ TABELITE LOOMISE SQL LAUSED:
   date <span class="pl-k">DATE</span><span class="pl-k">NOT NULL</span>,
   weight <span class="pl-k">INT</span>(<span class="pl-c1">5</span>) <span class="pl-k">NOT NULL</span>,
   height <span class="pl-k">INT</span>(<span class="pl-c1">5</span>) <span class="pl-k">NOT NULL</span>,
-  created <span class="pl-k">TIMESTAMP</span><span class="pl-k">NOT NULL</span><span class="pl-k">DEFAULT</span><span class="pl-k">CURRENT_TIMESTAMP</span><span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
+  created <span class="pl-k">TIMESTAMP</span> <span class="pl-k">NOT NULL</span> <span class="pl-k">DEFAULT</span> <span class="pl-k">CURRENT_TIMESTAMP</span> <span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
 );</pre></div>
 
 <div class="highlight highlight-source-sql"><pre><span class="pl-k">CREATE</span> <span class="pl-k">TABLE</span> <span class="pl-en">FoodData</span> (
@@ -55,7 +55,7 @@ TABELITE LOOMISE SQL LAUSED:
   content <span class="pl-k"> VARCHAR</span>(<span class="pl-c1">300</span>) <span class="pl-k">NOT NULL</span>,
   drinks <span class="pl-k"> VARCHAR</span>(<span class="pl-c1">300</span>) <span class="pl-k">NOT NULL</span>,
   amount <span class="pl-k"> FLOAT</span><span class="pl-k">NOT NULL</span>,
-  created <span class="pl-k"> TIMESTAMP</span><span class="pl-k">NOT NULL</span><span class="pl-k">DEFAULT</span><span class="pl-k">CURRENT_TIMESTAMP</span><span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>,
+  created <span class="pl-k">TIMESTAMP</span> <span class="pl-k">NOT NULL</span> <span class="pl-k">DEFAULT</span> <span class="pl-k">CURRENT_TIMESTAMP</span> <span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
   deleted <span class="pl-k"> DATE DEFAULT NULL</span>
 );</pre></div>
 
@@ -67,7 +67,7 @@ TABELITE LOOMISE SQL LAUSED:
   Kilometers <span class="pl-k">FLOAT</span><span class="pl-k">NOT NULL</span>,
   feeling <span class="pl-k">VARCHAR</span>(<span class="pl-c1">20</span>) <span class="pl-k">NOT NULL</span>,
   comment <span class="pl-k">VARCHAR</span>(<span class="pl-c1">255</span>) <span class="pl-k">NOT NULL</span>,
-  created <span class="pl-k">TIMESTAMP</span><span class="pl-k">NOT NULL</span><span class="pl-k">DEFAULT</span><span class="pl-k">CURRENT_TIMESTAMP</span><span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
+  created <span class="pl-k">TIMESTAMP</span> <span class="pl-k">NOT NULL</span> <span class="pl-k">DEFAULT</span> <span class="pl-k">CURRENT_TIMESTAMP</span> <span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
 );</pre></div>
 
 KOKKUVÕTE - Mida õppisid juurde? Mis ebaõnnestus? Mis oli keeruline?
