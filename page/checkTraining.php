@@ -1,5 +1,5 @@
 	<?php 
-	$sql_text = "";
+	$sql_extra = "";
 	$msg = "";
 	require("../functions.php");
 	
@@ -87,14 +87,19 @@
 							<tbody>
 							<?php
 
-							$startDate = $Helper->cleanInput($_GET["startDate"]);
-							$endDate = $Helper->cleanInput($_GET["endDate"]);
+							$startDateURL = "";
+							$endDateURL = "";
+							if(isset($_GET["startDate"])){ $startDateURL = $_GET["startDate"]; }
+							if(isset($_GET["startDate"])){ $endDate = $_GET["endDate"]; }
+
+							$startDate = $Helper->cleanInput($startDateURL);
+							$endDate = $Helper->cleanInput($endDateURL);
 
 								// võtame tulemused
 								$array = $Results->displayResults($startDate, $endDate);
 
 								// kui pole tulemusi
-								if($array["type"] == "not_found"){
+								if(isset($array["type"]) == "not_found"){
 
 									?>
 									<tr class="error">
