@@ -42,10 +42,10 @@ TABELITE LOOMISE SQL LAUSED:
 <div class="highlight highlight-source-sql"><pre><span class="pl-k">CREATE</span> <span class="pl-k">TABLE</span> <span class="pl-en">PersonData</span> (
   id <span class="pl-k">INT</span>(<span class="pl-c1">11</span>) <span class="pl-k">NOT NULL</span>,
   user_id <span class="pl-k">INT</span>(<span class="pl-c1">11</span>) <span class="pl-k">NOT NULL</span>,
-  date <span class="pl-k">DATE</span><span class="pl-k">NOT NULL</span>,
+  date <span class="pl-k">DATE</span> <span class="pl-k">NOT</span> <span class="pl-k">NULL</span>,
   weight <span class="pl-k">INT</span>(<span class="pl-c1">5</span>) <span class="pl-k">NOT NULL</span>,
   height <span class="pl-k">INT</span>(<span class="pl-c1">5</span>) <span class="pl-k">NOT NULL</span>,
-  created <span class="pl-k">TIMESTAMP</span> <span class="pl-k">NOT NULL</span> <span class="pl-k">DEFAULT</span> <span class="pl-k">CURRENT_TIMESTAMP</span> <span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
+  created <span class="pl-k">TIMESTAMP</span> <span class="pl-k">NOT</span> <span class="pl-k">NULL</span> <span class="pl-k">DEFAULT</span> <span class="pl-k">CURRENT_TIMESTAMP</span> <span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
 );</pre></div>
 
 <div class="highlight highlight-source-sql"><pre><span class="pl-k">CREATE</span> <span class="pl-k">TABLE</span> <span class="pl-en">FoodData</span> (
@@ -54,8 +54,8 @@ TABELITE LOOMISE SQL LAUSED:
   food <span class="pl-k"> VARCHAR</span>(<span class="pl-c1">300</span>) <span class="pl-k">NOT NULL</span>,
   content <span class="pl-k"> VARCHAR</span>(<span class="pl-c1">300</span>) <span class="pl-k">NOT NULL</span>,
   drinks <span class="pl-k"> VARCHAR</span>(<span class="pl-c1">300</span>) <span class="pl-k">NOT NULL</span>,
-  amount <span class="pl-k"> FLOAT</span><span class="pl-k">NOT NULL</span>,
-  created <span class="pl-k">TIMESTAMP</span> <span class="pl-k">NOT NULL</span> <span class="pl-k">DEFAULT</span> <span class="pl-k">CURRENT_TIMESTAMP</span> <span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
+  amount <span class="pl-k"> FLOAT</span> <span class="pl-k">NOT</span> <span class="pl-k">NULL</span>,
+  created <span class="pl-k">TIMESTAMP</span> <span class="pl-k">NOT</span> <span class="pl-k">NULL</span> <span class="pl-k">DEFAULT</span> <span class="pl-k">CURRENT_TIMESTAMP</span> <span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
   deleted <span class="pl-k"> DATE DEFAULT NULL</span>
 );</pre></div>
 
@@ -63,8 +63,8 @@ TABELITE LOOMISE SQL LAUSED:
   id <span class="pl-k">INT</span>(<span class="pl-c1">11</span>) <span class="pl-k">NOT NULL</span>,
   user_id <span class="pl-k">INT</span>(<span class="pl-c1">11</span>) <span class="pl-k">NOT NULL</span>,
   TypeOfTraining <span class="pl-k">VARCHAR</span>(<span class="pl-c1">20</span>) <span class="pl-k">NOT NULL</span>,
-  WorkoutHour <span class="pl-k">FLOAT</span><span class="pl-k">NOT NULL</span>,
-  Kilometers <span class="pl-k">FLOAT</span><span class="pl-k">NOT NULL</span>,
+  WorkoutHour <span class="pl-k">FLOAT</span> <span class="pl-k">NOT NULL</span>,
+  Kilometers <span class="pl-k">FLOAT</span> <span class="pl-k">NOT NULL</span>,
   feeling <span class="pl-k">VARCHAR</span>(<span class="pl-c1">20</span>) <span class="pl-k">NOT NULL</span>,
   comment <span class="pl-k">VARCHAR</span>(<span class="pl-c1">255</span>) <span class="pl-k">NOT NULL</span>,
   created <span class="pl-k">TIMESTAMP</span> <span class="pl-k">NOT NULL</span> <span class="pl-k">DEFAULT</span> <span class="pl-k">CURRENT_TIMESTAMP</span> <span class="pl-k">ON UPDATE CURRENT_TIMESTAMP</span>
@@ -72,10 +72,7 @@ TABELITE LOOMISE SQL LAUSED:
 
 KOKKUVÕTE - Mida õppisid juurde? Mis ebaõnnestus? Mis oli keeruline?
 
-Marliis:
-Juurde õppisin lehe kujundamist ning nägin, kui kaua võtab ühe veebilehekülje tegemine tegelikult aega. Samuti polnud ma varem kasutanud GitHub'i ega andmebaasi.
-Ebaõnnestus see, et me ei osanud kõiki esialgselt plaanitud funktsioone tööle saada, kuna need osutusid liiga keerulisteks.
-Keeruline oli tulemuste lehe tööle saamine ja erinevate errorite lahendamine.
+Marliis - Juurde õppisin lehe kujundamist ning nägin, kui kaua võtab ühe veebilehekülje tegemine tegelikult aega. Samuti polnud ma varem kasutanud GitHub'i ega andmebaasi. Ebaõnnestus see, et me ei osanud kõiki esialgselt plaanitud funktsioone tööle saada, kuna need osutusid liiga keerulisteks. Keeruline oli tulemuste lehe tööle saamine ja erinevate errorite lahendamine.
 
 Eliise -
 
