@@ -76,7 +76,7 @@ Marliis - Juurde õppisin lehe kujundamist ning nägin, kui kaua võtab ühe vee
 
 Eliise -
 
-Regiina -
+Regiina - Õppisin juurde vigade kõrvaldamist ja väikeste, kuid oluliste detailide nägemist, samuti õppisin juurde pisut lehe kujunduspoolt. Ebaõnnestusid kõik need asjad, mis ületasid oskuste piirid, ehk paljud esialgu mõeldud asjad ei saanud teostust ning tuli leida kergem viis nende teostamiseks või need üldse välja jätta. Keeruline oli sellise rühmatöö puhul peamiselt väheste teadmiste omamine, funktsioonide tööle saamine ning teiste tehtud tööga kursis hoidmine. 
 
 Geithy -
 
