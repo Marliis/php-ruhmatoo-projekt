@@ -74,7 +74,7 @@ KOKKUVÕTE - Mida õppisid juurde? Mis ebaõnnestus? Mis oli keeruline?
 
 Marliis - Juurde õppisin lehe kujundamist ning nägin, kui kaua võtab ühe veebilehekülje tegemine tegelikult aega. Samuti polnud ma varem kasutanud GitHub'i ega andmebaasi. Ebaõnnestus see, et me ei osanud kõiki esialgselt plaanitud funktsioone tööle saada, kuna need osutusid liiga keerulisteks. Keeruline oli tulemuste lehe tööle saamine ja erinevate errorite lahendamine.
 
-Eliise -
+Eliise - Aine raames õppisin väga palju juurde, õppisin kasutama MySQL andmebaasi, lehekülgede omavahel sidumist ning kujundamist. Ebaõnnestus see, et meil jäi teadmistest väheseks, et saada funktsioonid korrektselt tööle. Rühmatöö puhul osutus keeruliseks errorite parandamine ning veebilehtedele kalkulaatorite ehitamine, samuti tekkis mõningaid probleeme tulemuste kuvamisega.
 
 Regiina - Õppisin juurde vigade kõrvaldamist ja väikeste, kuid oluliste detailide nägemist, samuti õppisin juurde pisut lehe kujunduspoolt. Ebaõnnestusid kõik need asjad, mis ületasid oskuste piirid, ehk paljud esialgu mõeldud asjad ei saanud teostust ning tuli leida kergem viis nende teostamiseks või need üldse välja jätta. Keeruline oli sellise rühmatöö puhul peamiselt väheste teadmiste omamine, funktsioonide tööle saamine ning teiste tehtud tööga kursis hoidmine. 
 
