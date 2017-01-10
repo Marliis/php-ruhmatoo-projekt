@@ -3,7 +3,7 @@
 PROJEKTI NIMI - MINU TERVISEPÄEVIK
 
 PROJEKTI VEEBIRAKENDUSE PILT:
-![screen shot 2017-01-09 at 20 41 32](https://cloud.githubusercontent.com/assets/22045695/21778683/148fb440-d6ad-11e6-94a6-035350a6df2a.png)
+![screen shot 2017-01-10 at 16 28 01](https://cloud.githubusercontent.com/assets/22045695/21809797/d9d2822e-d751-11e6-927f-d6e8a47898a8.png)
 
 LIIKMED - Marliis Odamus, Eliise Piiritalo, Regiina Krivulina, Geithy Plakk
 
