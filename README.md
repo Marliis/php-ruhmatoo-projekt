@@ -82,7 +82,7 @@ Eliise - Aine raames õppisin väga palju juurde, õppisin kasutama MySQL andmeb
 
 Regiina - Õppisin juurde vigade kõrvaldamist ja väikeste, kuid oluliste detailide nägemist, samuti õppisin juurde pisut lehe kujunduspoolt. Ebaõnnestusid kõik need asjad, mis ületasid oskuste piirid, ehk paljud esialgu mõeldud asjad ei saanud teostust ning tuli leida kergem viis nende teostamiseks või need üldse välja jätta. Keeruline oli sellise rühmatöö puhul peamiselt väheste teadmiste omamine, funktsioonide tööle saamine ning teiste tehtud tööga kursis hoidmine. 
 
-Geithy -
+Geithy - Õppisin juurde funktsioonide sidumist, andmebaasi kasutamist, piltide lisamist, põhimõtteliselt kõike. Kuna koodi kirjutamine oli minu jaoks väga keeruline, läks enamus ajast errorite eemaldamiseks, mis kohati morjendab, kui oled leidnud sobiva funktsiooni ning see ei hakka ei üht, ega teist-pidi tööle. Keeruline oli kaloraazi arvutamise funktsiooni/valemite leidmine. Alguses soovisime teha tabelit, mis näitaks kulutatud kaloreid jne.. Kuid leidsime, et see oleks liiga keeruline olnud, kuna oleksime pidanud arvutama südamrütme jne. Ülesanne oli mahukas ja raske, kuid olen lõpptulemusega rahul.
 
 
 **Rühmatööde demo päev** on valitud eksamipäev jaanuaris, kuhu tullakse terve rühmaga koos!
