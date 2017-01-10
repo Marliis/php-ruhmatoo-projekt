@@ -13,9 +13,13 @@ KIRJELDUS - Rühmatöö eeskujuks võtsime "Terve Eesti Eest" treeningpäeviku. 
 Teise rakendusena võtsime eeskujuks "Nutridata Toitumisprogramm". NutriData toitumisprogramm võimaldab analüüsida menüü energia- ja toitainete sisalduse vastavust Eesti riiklikele ea- ja soopõhistele toitumissoovitustele.
 
 FUNKTSIONAALSUSE LOETELU -
+
 v0.1 Saab teha kasutaja ja sisselogida
+
 v0.2 Saab lisada treeningandmed
+
 v0.3 Saab lisada toidukorra
+
 v0.4 Saab näha enda tulemusi
 
 ANDMEBAASI SKEEM:
